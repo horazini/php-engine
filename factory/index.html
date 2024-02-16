@@ -1,0 +1,63 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Only Theme Switcher by Alexander Sandberg</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <input type="checkbox" class="theme-checkbox" id="theme-checkbox">
+    <div id="page">
+        <div id="content">
+
+            <main>
+                <label for="theme-checkbox" id="theme-switch"></label>
+
+                <p align="center">
+                    <a>Hola! Soy Horacio Zini. Ésta es mi página.<br>
+                        Espero que lo que encuentres acá te sea de interés.</a>
+                </p>
+
+                <hr>
+                <br><br>
+
+                <ul>
+                    <li>
+                        <a href="./writings.php">
+                            📄Escritos</a>
+                    </li>
+                    <li>
+                        <a href="/">✉️Contacto</a>
+                    </li>
+                </ul>
+            </main>
+            <footer>
+                <br>
+                <a href="/project/">horaciozini.xyz</a>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // This code is only used to remember theme selection between page loads
+        const themeSwitch = document.querySelector('.theme-checkbox');
+        themeSwitch.checked = localStorage.getItem('switchedTheme') === 'true';
+
+        themeSwitch.addEventListener('change', function (e) {
+            if (e.currentTarget.checked === true) {
+                // Add item to localstorage
+                localStorage.setItem('switchedTheme', 'true');
+            } else {
+                // Remove item if theme is switched back to normal
+                localStorage.removeItem('switchedTheme');
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>

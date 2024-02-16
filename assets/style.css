@@ -1,0 +1,152 @@
+		/* Fonts */
+
+		html {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			font-family: monospace, monospace;
+		}
+
+		h1,
+		h2,
+		h3 {
+			text-align: center;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		a:link,
+		a:visited {
+			color: blue;
+		}
+
+		/* template structure */
+
+		header {
+			text-align: center;
+		}
+
+		main {
+			text-align: justify;
+		}
+
+		footer {
+			text-align: center;
+			/* margin: 50px 0; */
+		}
+
+		/* Columns */
+
+		#page {
+			display: flex;
+			justify-content: center;
+			/* 			
+			background: #1d2030;
+			color: #f7f7f7;
+			 */
+			/* font: normal 125%/1.4; */
+			min-height: 100%;
+			transition: color .2s, background-color .2s;
+		}
+
+		#content {
+			width: 100%;
+			max-width: 900px;
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+
+		/* @media screen and (max-aspect-ratio: 9/8) { */
+		@media (min-width: 768px) {
+			content {
+				width: 60%;
+			}
+		}
+
+		/* Elements */
+
+		div.cuadro {
+			border: 1px solid lightgray;
+			padding: 0.5em;
+			margin-left: 10%;
+			margin-right: 10%;
+			text-align: justify;
+		}
+
+		table {
+			Border-Spacing: 0px;
+			Empty-Cells: show;
+		}
+
+		li {
+			text-decoration: none;
+			padding: 0.25em;
+		}
+
+		#tags {
+			clear: both;
+			padding: 0;
+			border-radius: 10px;
+			text-align: center;
+			margin: 0 auto;
+			border: solid 1px;
+			border-style: dashed;
+			list-style: none;
+		}
+
+		#tags li {
+			display: inline-block;
+		}
+
+		#tags a {
+			display: block;
+			width: auto;
+			border-radius: 10px;
+			margin: 2px;
+		}
+
+		/* 
+		#emojiImage {
+			margin-top: 2px;
+			margin-left: 2px;
+			margin-right: 5px
+		} 
+		*/
+
+
+
+		/* GitHub page style */
+
+		/* 
+		a {
+			color: #bd93f9;
+		}
+		*/
+
+		/* Table */
+
+		/* 
+		#tableBox {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 40px 0;
+		}
+
+		table {
+			border: 1px solid #111111;
+			empty-cells: show;
+		}
+
+		td {
+			border: 1px solid #111111;
+			text-align: left;
+			padding: 4px;
+		}
+
+		tr {
+			background-color: #25293d;
+		} 
+		*/

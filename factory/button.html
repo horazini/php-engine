@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            /* Light mode */
+            --light-slider-icon: "🌞";
+            --light-slider-bg: #ccc;
+
+            /* Dark mode */
+            --dark-slider-icon: "🌙";
+            --dark-slider-bg: grey;
+
+            /* Default mode */
+            --slider-icon: var(--light-slider-icon);
+            --slider-bg: var(--light-slider-bg);
+        }
+
+        /* The switch - the box around the slider */
+        #theme-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        /* Hide default HTML checkbox */
+        #theme-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        #theme-checkbox {
+            /* * Hides the checkbox * */
+            position: absolute !important;
+            height: 1px;
+            width: 1px;
+            overflow: hidden;
+            clip: rect(1px, 1px, 1px, 1px);
+        }
+
+        /* The slider */
+        #theme-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--slider-bg);
+            -webkit-transition: .4s;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        #theme-slider:before {
+            position: absolute;
+            -webkit-transition: .4s;
+            transition: .4s;
+            border-radius: 50%;
+            content: var(--slider-icon);
+            background-color: transparent;
+            font-size: 20px;
+            top: 2px;
+            left: 3px;
+        }
+
+        #theme-checkbox:checked~#page {
+            --slider-bg: var(--dark-slider-bg);
+            --slider-icon: var(--dark-slider-icon);
+        }
+
+        #theme-checkbox:checked+#page #content #theme-switch #theme-slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <input type="checkbox" id="theme-checkbox">
+    <div id="page">
+        <div id="content">
+
+            <main>
+                <label for="theme-checkbox" id="theme-switch">
+                    <span id="theme-slider"></span>
+                </label>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>
