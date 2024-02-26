@@ -1,3 +1,3 @@
 RewriteEngine on
-RewriteBase /project/writings/
+RewriteBase /php-engine/writings/
 RewriteRule ^(.*)$ index.php [L]

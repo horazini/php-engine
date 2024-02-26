@@ -4,8 +4,7 @@ $header = "
 		<h1>Página de Horacio Zini</h1>
 	";
 
-$contenido = '
-
+$main_content = '
 	<p align="center">
 	<a>Hola! Soy Horacio Zini. Ésta es mi página.<br>
 	Espero que lo que encuentres acá te sea de interés.</a> 

@@ -18,13 +18,22 @@
     <div id="page">
         <div id="content">
             <header>
-                <?php echo $header ?>
+                <h1>
+                    <?php echo $title ?>
+                </h1>
+                <a>Horacio Zini
+                    <br>
+                    <?php echo date("Y", strtotime($date)) ?>
+                </a>
+                <br><br>
             </header>
 
             <hr>
 
             <main>
-                <?php echo $contenido ?>
+                <br>
+                <?php echo $main_content ?>
+                <br><br>
             </main>
 
             <hr>

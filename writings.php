@@ -1,5 +1,7 @@
 <?php
 
+include 'datefunctions.php';
+
 $lista = ' ';
 $folders = glob('./writings/data/*', GLOB_ONLYDIR); // Get list of folders in the directory
 
@@ -12,8 +14,10 @@ foreach ($folders as $writing) {
 		$partesUrl = explode('/', $writing);
 		$escritoSolicitado = end($partesUrl);
 
+		$formattedDate = formatDate($date);
+
 		// Adds an element with date and title obtained from the data file to the list
-		$lista .= "<li>$date – <a href=\"writings/$escritoSolicitado\">$title</a></li>";
+		$lista .= "<li>$formattedDate – <a href=\"writings/$escritoSolicitado\">$title</a></li>";
 	}
 }
 
@@ -39,7 +43,7 @@ foreach ($blogtags as $blogtag => $emoji) {
 	$taglist .=  "<li><a href='./tags/$blogtag'>$emoji </a></li>\n";
 }
 
-$contenido = "
+$main_content = "
 	<article>
 		<h2>Temas</h2>
 		<ul id='tags'>

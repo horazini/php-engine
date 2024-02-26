@@ -1,11 +1,7 @@
 <?php
-$date = "2022 Sep 23";
+$date = "2022-09-23";
 
 $title = "Predecible y determinista";
-$header = "
-		<h1>Predecible y determinista</h1>
-		<a>Horacio Zini<br>2022<br><br></a>
-	";
 
 $tags = '
 <a href="./tags/logicomp" id="tag_logicaycomputacion">🧮Lógica y Computación</a> · 
