@@ -8,9 +8,9 @@ $rutaEscrito = "./data/$escritoSolicitado";
 
 // Verificar si el archivo del escrito existe
 if (file_exists("$rutaEscrito/data.php")) {
-    include("$rutaEscrito/data.php");
-    include("$rutaEscrito/content.php");
-    include('../assets/templates/writings.html');
+    require("$rutaEscrito/data.php");
+    require("$rutaEscrito/content.php");
+    require('../assets/templates/writings.html');
 } else {
     header("Location: ../writings.php");
     exit();

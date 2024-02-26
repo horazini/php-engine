@@ -5,7 +5,7 @@
     --light-slider-icon: "🌞";
     --light-slider-bg: #ccc;
     --light-text: black;
-    --light-bg: #f2f2f2;
+    --light-bg: #f7f7f7;
     --light-theme: blue;
 
     /* Dark mode */
@@ -25,7 +25,6 @@
 
 /* Main style */
 
-html,
 body {
     margin: 0;
     padding: 0;
@@ -61,18 +60,19 @@ main {
 
 footer {
     text-align: center;
+    /* margin: 50px 0; */
 }
+
+/* Columns */
 
 #page {
     display: flex;
     justify-content: center;
-    background: var(--bg-color);
-    color: var(--text-color);
     min-height: 100%;
     transition: color .2s, background-color .2s;
+    background: var(--bg-color);
+    color: var(--text-color);
 }
-
-/* Columns */
 
 #content {
     width: 100%;
@@ -178,7 +178,7 @@ li {
     --theme-color: var(--dark-theme);
 }
 
-#theme-checkbox:checked+#page #content #theme-switch:before {
+#theme-checkbox:checked+#page #theme-switch:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);

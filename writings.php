@@ -7,7 +7,7 @@ foreach ($folders as $writing) {
 	$writingDataFile = $writing . '/data.php'; // Route to the data.php in the curren directory
 
 	if (file_exists($writingDataFile)) {
-		include $writingDataFile; // Includes the data file
+		require $writingDataFile; // requires the data file
 
 		$partesUrl = explode('/', $writing);
 		$escritoSolicitado = end($partesUrl);
@@ -53,4 +53,4 @@ $contenido = "
 	</article>
 ";
 
-include('./assets/templates/template.html');
+require('./assets/templates/template.html');

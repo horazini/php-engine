@@ -1,41 +1,52 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <link rel="icon" href="favicon">
     <title>
         <?php echo $title ?> | Horacio Zini
     </title>
-
     <link rel="stylesheet" href="/project/assets/style.css">
 </head>
 
 <body>
+    <input type="checkbox" class="theme-checkbox" id="theme-checkbox">
     <div id="page">
         <div id="content">
             <header>
                 <?php echo $header ?>
+                <hr>
             </header>
-
-            <hr>
 
             <main>
                 <?php echo $contenido ?>
             </main>
 
-            <hr>
-
             <footer>
+                <hr>
                 <br>
                 <a href="/project/">horaciozini.xyz</a>
+                <hr>
             </footer>
-
-            <hr>
         </div>
     </div>
+
+    <script>
+        // This code is only used to remember theme selection between page loads
+        const themeSwitch = document.querySelector('.theme-checkbox');
+        themeSwitch.checked = localStorage.getItem('switchedTheme') === 'true';
+
+        themeSwitch.addEventListener('change', function (e) {
+            if (e.currentTarget.checked === true) {
+                // Add item to localstorage
+                localStorage.setItem('switchedTheme', 'true');
+            } else {
+                // Remove item if theme is switched back to normal
+                localStorage.removeItem('switchedTheme');
+            }
+        });
+    </script>
 </body>
 
 </html>

@@ -3,27 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Only Theme Switcher by Alexander Sandberg</title>
+    <title>CSS Theme Switch | Horacio Zini</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
     <input type="checkbox" class="theme-checkbox" id="theme-checkbox">
     <div id="page">
+        <div style="margin-top: 5; justify-self: flex-start">
+            <label for="theme-checkbox" id="theme-switch"></label>
+        </div>
         <div id="content">
+            <header>
+                <h1>
+                    Página de Horacio Zini
+                </h1>
+                <hr>
+            </header>
 
             <main>
-                <label for="theme-checkbox" id="theme-switch"></label>
-
                 <p align="center">
-                    <a>Hola! Soy Horacio Zini. Ésta es mi página.<br>
-                        Espero que lo que encuentres acá te sea de interés.</a>
+                    Hola! Soy Horacio Zini. Ésta es mi página.<br>
+                    Espero que lo que encuentres acá te sea de interés.
                 </p>
-
                 <hr>
                 <br><br>
-
                 <ul>
                     <li>
                         <a href="./writings.php">
@@ -34,9 +38,12 @@
                     </li>
                 </ul>
             </main>
+
             <footer>
+                <hr>
                 <br>
                 <a href="/project/">horaciozini.xyz</a>
+                <hr>
             </footer>
         </div>
     </div>

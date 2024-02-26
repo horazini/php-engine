@@ -25,4 +25,4 @@ $contenido = '
 
 ';
 
-include('./assets/templates/template.html');
+require('./assets/templates/template.html');
