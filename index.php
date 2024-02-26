@@ -1,8 +1,6 @@
 <?php
 $title = "Inicio";
-$header = "
-		<h1>Página de Horacio Zini</h1>
-	";
+$header = "Página de Horacio Zini";
 
 $main_content = '
 	<p align="center">
@@ -21,7 +19,6 @@ $main_content = '
 			<a href="/">✉️Contacto</a> 
 		</li>
 	</ul>
-
 ';
 
 require('./assets/templates/template.html');

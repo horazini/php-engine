@@ -1,6 +1,7 @@
 <?php
 
 include 'datefunctions.php';
+include 'tags.php';
 
 $lista = ' ';
 $folders = glob('./writings/data/*', GLOB_ONLYDIR); // Get list of folders in the directory
@@ -22,21 +23,7 @@ foreach ($folders as $writing) {
 }
 
 $title = "Escritos";
-$header = "
-	<h1>Escritos</h1>
-";
-
-$blogtags = array(
-	"politica" => "👴🏼Politica",
-	"sociales" => "👥Sociales",
-	"estilodevida" => "💆🏻‍♂️Estilo de vida",
-	"personal" => "🙋🏻‍♂️Personal",
-	"tecnologia" => "👨🏻‍💻Tecnología",
-	"logicomp" => "🧮Lógica y Computación",
-	"linguistica" => "🗣️Lingüística",
-	"filosofia" => "🤔Filosofía",
-	"ciencia" => "👨🏻‍🔬Ciencia"
-);
+$header = "Escritos";
 
 $taglist = ' ';
 foreach ($blogtags as $blogtag => $emoji) {
