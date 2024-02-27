@@ -1,7 +1,7 @@
 <?php
 
-include 'datefunctions.php';
-include 'tags.php';
+include 'utils/datefunctions.php';
+include 'utils/tags.php';
 
 $lista = ' ';
 $folders = glob('./writings/data/*', GLOB_ONLYDIR); // Get list of folders in the directory
